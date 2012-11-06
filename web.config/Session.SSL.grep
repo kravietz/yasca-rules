@@ -1,0 +1,26 @@
+name = Cookieless Authentication Enabled
+file_type = config
+grep = /authentication mode="Forms"/
+grep = /requireSSL="false"/
+category = Session Management
+severity = 3
+description =
+<p>
+            Your configuration allows authentication cookies to be transferred in clear-text 
+            form. An attacker that can be able to monitor your network, can easily steal 
+            your session.</p>
+        <h3 class="style5">
+            Secure Configuration
+        </h3>
+        <p>
+            <span class="style6">&lt;configuration&gt;</span><br class="style6" />
+            <span class="style6">&nbsp;&nbsp; &lt;system.web&gt;</span><br class="style6" />
+            <span class="style6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;authentication 
+            mode=&quot;Forms&quot;&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;forms requireSSL=&quot;<b>true</b>&quot;&gt;</span></p>
+    <h3>
+        <span class="style5">References</span></h3>
+        <ul>
+            <li"><a href="http://msdn.microsoft.com/en-us/library/system.web.security.formsauthentication.requiressl.aspx">FormsAuthentication::RequireSSL Property</a>
+    </ul>
+END;

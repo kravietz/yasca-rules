@@ -1,0 +1,26 @@
+name = Liberal cookies path
+file_type = config
+grep = /forms name/
+grep = /path="\/"/
+category = Session Management
+severity = 3
+description =
+<p>
+            Your application&#39;s cookie path is defined liberal. It means that cookie will be 
+            valid and related whole domain. Restrict the cookie to the specific directories 
+            on application to reduce risk about cookie related issues.</p>
+        <h3 class="style5">
+            Secure Configuration
+        </h3>
+        <p>
+            <span class="style6">&lt;configuration&gt;</span><br class="style6" />
+            <span class="style6">&nbsp;&nbsp; &lt;system.web&gt;</span><br class="style6" />
+            <span class="style6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;authentication 
+            mode=&quot;Forms&quot;&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;forms path=&quot;{abcd}&quot;&gt;</span></p>
+    <h3>
+        <span class="style5">References</span></h3>
+        <ul>
+            <li class="style2">http://msdn.microsoft.com/en-us/library/1d3t3c61(v=vs.71).aspx
+    </ul>
+END;

@@ -1,0 +1,29 @@
+name = Sliding Expiration of Session Cookie
+file_type = config
+grep = /authentication mode="Forms"/
+grep = /slidingExpiration="true"/
+category = Session Management
+severity = 3
+description =
+<p>
+            Sliding Expiration disables timeouts for ASP.NET sessions. If it is set to 
+            false, after the timeout interval, user must re-login to application with 
+            credentials. If it is set to true, then if an attackers steals cookie can use it 
+            for gainin access to the application with the cookie&#39;s owner&#39;s permissions.</p>
+        <h3 class="style5">
+            Secure Configuration
+        </h3>
+        <p>
+            <span class="style6">&lt;configuration&gt;</span><br class="style6" />
+            <span class="style6">&nbsp;&nbsp; &lt;system.web&gt;</span><br class="style6" />
+            <span class="style6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;authentication 
+            mode=&quot;Forms&quot;&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;forms slidingExpiration=&quot;<b>true</b>&quot;&gt;</span></p>
+    <h3>
+        <span class="style5">References</span></h3>
+        <ul>
+            <li class="style2">
+                http://www.developerfusion.com/article/6745/top-10-application-security-vulnerabilities-in-webconfig-files-part-two/4/</li>
+            <li class="style2">http://msdn.microsoft.com/en-us/library/1d3t3c61.aspx</li>
+    </ul>
+END;

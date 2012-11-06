@@ -1,0 +1,27 @@
+name = URL Redirection is enabled
+file_type = config
+grep = /enableCrossAppRedirects="true"/
+category = Session Management
+severity = 3
+description =
+<p>
+            Your configuration allows to make URL Redirections. If your applications have an 
+            URL Redirection vulnerability, this option can protect you and your clients from 
+            phishing or related spoofing attacks.</p>
+        <h3 class="style5">
+            Secure Configuration
+        </h3>
+        <p>
+            <span class="style6">&lt;configuration&gt;</span><br class="style6" />
+            <span class="style6">&nbsp;&nbsp; &lt;system.web&gt;</span><br class="style6" />
+            <span class="style6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;authentication 
+            mode=&quot;Forms&quot;&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;forms enableCrossAppRedirects=&quot;<b>false</b>&quot;&gt;</span></p>
+    <h3>
+        <span class="style5">References</span></h3>
+        <ul>
+            <li class="style2">http://msdn.microsoft.com/en-us/library/1d3t3c61.aspx</li>
+            <li class="style2">
+                http://www.pashabitz.com/PermaLink,guid,c5dacb0f-2b74-485f-abe9-296142a414ac.aspx</li>
+    </ul>
+END;

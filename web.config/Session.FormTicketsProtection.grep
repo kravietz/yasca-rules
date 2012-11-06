@@ -1,0 +1,27 @@
+name = Form tickets are not both encrypted-validated
+file_type = config
+grep = /forms name/
+grep = /protection="None"/
+category = Session Management
+severity = 3
+description =
+<p>
+            Your configuration allows transportation of your cookies both of not-encrypted 
+            and not-validated. This can lead an attacker to perform session hijacking, 
+            eavesdropping, session/cookie tampering and related issues.</p>
+        <h3 class="style5">
+            Secure Configuration
+        </h3>
+        <p>
+            <span class="style6">&lt;configuration&gt;</span><br class="style6" />
+            <span class="style6">&nbsp;&nbsp; &lt;system.web&gt;</span><br class="style6" />
+            <span class="style6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;authentication 
+            mode=&quot;Forms&quot;&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;forms protection=&quot;<b>All</b>&quot;&gt;</span></p>
+    <h3>
+        <span class="style5">References</span></h3>
+        <ul>
+            <li class="style2">http://msdn.microsoft.com/en-us/library/1d3t3c61.aspx</li>
+            <li class="style2">http://msdn.microsoft.com/en-us/library/ms998310.aspx</li>
+    </ul>
+END;

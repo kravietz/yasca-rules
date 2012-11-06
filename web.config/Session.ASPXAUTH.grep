@@ -1,0 +1,30 @@
+name = Non-Unique Authentication Cookie Used
+file_type = config
+grep = /authentication mode="Forms"/
+grep = /forms name=".ASPXAUTH/
+category = Session Management
+severity = 3
+description =
+<p>
+            Form based authentication feature of ASP.NET provides .ASPXAUTH for 
+            authentication cookie default. If you have more then one application at your web 
+            server and all of them uses the same name for authentcation cookie then an 
+            attacker that have authenticated any application on the web server, gains access 
+            all applications.</p>
+        <h3 class="style5">
+            Secure Configuration
+        </h3>
+        <p>
+            <span class="style6">&lt;configuration&gt;</span><br class="style6" />
+            <span class="style6">&nbsp;&nbsp; &lt;system.web&gt;</span><br class="style6" />
+            <span class="style6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;authentication 
+            mode=&quot;Forms&quot;&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;forms name=&quot;<b>{abcd}</b>&quot;&gt;</span></p>
+    <h3>
+        <span class="style5">References</span></h3>
+        <ul>
+            <li class="style2">
+                http://www.developerfusion.com/article/6745/top-10-application-security-vulnerabilities-in-webconfig-files-part-two/5/</li>
+            <li class="style2">http://msdn.microsoft.com/en-us/library/1d3t3c61.aspx</li>
+    </ul>
+END;
