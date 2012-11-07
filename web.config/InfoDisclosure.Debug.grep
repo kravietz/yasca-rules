@@ -2,24 +2,17 @@ name = Debugging enabled
 file_type = config
 grep = /<compilation debug="true"/
 category = Information Disclosure
-severity = 2
+severity = 3
 description = 
-<p>
-            You have enabled debugging on your application. This could be used by attackers 
-            to extract useful information such as detailed information and stack trace, etc. 
-            from application. Do not enable debugging on applications which are located on 
-            production environment.</p>
-        <h3 class="style5">
-            Secure Configuration
-        </h3>
-        <p>
-            <span class="style6">&lt;configuration&gt;</span><br class="style6" />
-            <span class="style6">&nbsp;&nbsp; &lt;system.web&gt;</span><br class="style6" />
-            <span class="style6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;compilation debug=&quot;<b>false</b>&quot;&gt;</span></p>
-    <h3>
-        <span class="style5">References</span></h3>
-        <ul>
-            <li class="style2">http://msdn.microsoft.com/en-us/library/s10awwz0.aspx<li class="style2">
-            http://www.developerfusion.com/article/6745/top-10-application-security-vulnerabilities-in-webconfig-files-part-two/6/<li class="style2">
-                http://www.acunetix.com/vulnerabilities/ASP.NET-debugging-enabled.htm</ul>
+<p>You have enabled debugging on your application. This could be used by attackers to extract useful information such as detailed information and stack trace, etc. from application. Do not enable debugging on applications which are located on production environment.</p>
+<h3>Secure Configuration</h3>
+<pre>
+&lt;configuration&gt;
+&nbsp;&nbsp; &lt;system.web&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;compilation debug=&quot;<b>false</b>&quot;&gt;
+</pre>
+<h3>References</h3>
+<ul>
+<li>Microsoft Support: <a href="http://support.microsoft.com/default.aspx?scid=kb;en-us;815157">HOW TO: Disable Debugging for ASP.NET Applications</a>
+</ul>
 END;
