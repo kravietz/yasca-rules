@@ -27,5 +27,6 @@ WCSA Mapping
 <tr><td>forms.xml <td>Your form tickets are not both encrypted-validated  <td>Session.FormTicketsProtection.grep
 <tr><td>forms.xml <td>Your form tickets are not validated <td>Session.FormTicketsValidation.grep
 <tr><td>forms.xml <td>Your form tickets are not encrypted <td>Session.FormTicketsEncryption.grep
+<tr><td>httpCookies.xml <td>Web cookies are not HttpOnly  <td>Session.httpOnly.grep 
 </thead>
 </table>
