@@ -1,4 +1,4 @@
-name = Cookieless Authentication Enabled
+name = Web cookies are not HttpOnly
 file_type = config
 grep = /httpOnlyCookies="false"/
 category = Session Management
@@ -14,6 +14,6 @@ Your configuration allows cookies to be be accessed from client-side scripting t
 </pre>
 <h3>References></h3>
 <ul>
-<li><a href="http://msdn.microsoft.com/en-us/library/vstudio/ms228262(v=vs.90).aspx">ihttpCookies Element (ASP.NET Settings Schema)</a> (MSDN)
+<li><a href="http://msdn.microsoft.com/en-us/library/vstudio/ms228262(v=vs.90).aspx">httpCookies Element (ASP.NET Settings Schema)</a> (MSDN)
 </ul>
 END;

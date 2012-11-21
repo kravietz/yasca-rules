@@ -1,0 +1,20 @@
+name = Web cookies doesn't require SSL
+file_type = config
+grep = /requireSSL="false"/
+category = Session Management
+severity = 3
+description =
+<p>
+<p>
+Your configuration allows web cookies to be transferred in clear-text form. An attacker that can be able to monitor your network, can easily steal your session.</p>
+<h3>Secure Configuration</h3>
+<pre>
+&lt;configuration&gt;
+&nbsp;&nbsp; &lt;system.web&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;httpCookies requireSSL=&quot;<b>true</b>&quot;&gt;
+</pre>
+<h3>References></h3>
+<ul>
+<li><a href="http://msdn.microsoft.com/en-us/library/vstudio/ms228262(v=vs.90).aspx">httpCookies Element (ASP.NET Settings Schema)</a> (MSDN)
+</ul>
+END;
