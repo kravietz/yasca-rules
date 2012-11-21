@@ -15,6 +15,8 @@ WCSA Mapping
 <thead>
 <tr><th colspan=2>WCSA  <th>Yasca
 <tr><th>File  <th>Rule  <th>File
+</thead>
+<tbody>
 <tr><td>compilation.xml <td>Debugging Enabled <td>InfoDisclosure.Debug.grep
 <tr><td>credentials.xml <td>Clear-text credentials <td>Authentication.StoredPassword.grep
 <tr><td>customErrors.xml  <td>Custom Errors Disabled  <td>InfoDisclosure.customErrors.grep
@@ -28,5 +30,7 @@ WCSA Mapping
 <tr><td>forms.xml <td>Your form tickets are not validated <td>Session.FormTicketsValidation.grep
 <tr><td>forms.xml <td>Your form tickets are not encrypted <td>Session.FormTicketsEncryption.grep
 <tr><td>httpCookies.xml <td>Web cookies are not HttpOnly  <td>Session.httpOnly.grep 
-</thead>
+<tr><td>httpCookies.xml <td>Web cookies doesn't require SSL  <td>Session.Secure.grep 
+<tr><td>
+</tbody>
 </table>
